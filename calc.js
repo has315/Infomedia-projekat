@@ -14,12 +14,9 @@ $(function(){
 		 document.getElementById("firstchar").value = strres[0]; 
 		 document.getElementById("secondchar").value = strres[1];
 		 
-		//variables from input fields to hold data for post
-		var factor1 = $("#firstchar").val();
-		var factor2 = $("#secondchar").val();
-		
+
 		//Post  data to php script
-		$.post("calcclass.php",{fct1: factor1, fct2: factor2} ,function(){
+		$.post("calcclass.php",{fct1: strres[0], fct2: strres[1]} ,function(){
 			alert("Combination added to database");
 			});
 			
